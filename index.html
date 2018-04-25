@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exception</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        background-image: url("images/welcome.jpg");
+        padding: 0px;
+        margin: 0px;
+    }
+    @keyframes fade-in {
+        0% {opacity: 0;}/*初始状态 透明度为0*/
+        30% {opacity: 0;}/*过渡状态 透明度为0*/
+        100% {opacity: 1;}/*结束状态 透明度为1*/
+    }
+    @-webkit-keyframes fade-in {/*针对webkit内核*/
+        0% {opacity: 0;}
+        30% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    #wrapper {
+        animation: fade-in;/*动画名称*/
+        animation-duration: 2s;/*动画持续时间*/
+        -webkit-animation:fade-in 2s;/*针对webkit内核*/
+    }
+</style>
+<script>
+function jump() {
+    window.location.href=('index.php');
+}
+</script>
+<body>
+<div class="container" id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="background: transparent">
+                        <img src="images/logo.png" style="width: 300px;" class="center-block">
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="text-align: center;">Exception</h1>
+                <h2 style="text-align: center;">学生管理系统</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-lg-offset-4 col-lg-4">
+                <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;" onclick="jump();">点击进入网页版</button>
+                &nbsp;
+                <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;">点击下载客户端</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
