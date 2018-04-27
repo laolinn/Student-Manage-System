@@ -53,7 +53,7 @@
             <div class="col-lg-offset-4 col-lg-4">
                 <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;" data-toggle="modal" data-target="#loginmodal">点击进入网页版</button>
                 &nbsp;
-                <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;"><a>点击下载客户端</a></button>
+                <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;"><a href="file/student.rar" download="Exception桌面客户端">点击下载客户端</a></button>
             </div>
         </div>
     </div>
