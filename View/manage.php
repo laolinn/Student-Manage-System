@@ -1,4 +1,4 @@
-﻿<?php
+﻿﻿<?php
 include("../Database/connect.php");
 include("nav.php");
 ?>
@@ -70,6 +70,22 @@ include("nav.php");
                             ?>
                             </tbody>
                         </table>
+                    </div>
+                    <div id="changeinfo" class="modal fade" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">X</button>
+                                    <h4 class="modal-title">修改学生信息</h4>
+                                </div>
+                                <div class="modal-body">
+                                        <?php
+                                        @$finname=$_POST["newname"];
+                                        ?>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
