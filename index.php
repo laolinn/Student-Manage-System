@@ -53,7 +53,7 @@
             <div class="col-lg-offset-4 col-lg-4">
                 <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;" data-toggle="modal" data-target="#loginmodal">点击进入网页版</button>
                 &nbsp;
-                <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;">点击下载客户端</button>
+                <button type="button" class="center-block btn btn-lg btn-primary" style="opacity: 0.85;"><a>点击下载客户端</a></button>
             </div>
         </div>
     </div>
@@ -69,17 +69,17 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="username">用户名</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="username" name="username" placeholder="请输入账号" autocomplete="off">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="请输入账号" autofocus="autofocus">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="password">密码</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码" autocomplete="off">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn center-block">登陆</button>
+                            <button type="submit" class="btn btn-primary center-block btn-lg">登陆</button>
                         </div>
                     </form>
                 </div>
@@ -102,6 +102,13 @@ if($_POST)
 {
     $search="select * from admin where username='$username' and password='$password'";
     $sql=$connect -> query($search);
+
+    if(trim($username)==null || trim($password)==null)
+    {
+        echo "<script>alert('请输入账号密码！');</script>";
+        exit;
+    }
+
     if($check=$sql->fetch_array())
     {
         $_SESSION['login']=$username;
